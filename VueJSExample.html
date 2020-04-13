@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Learnig Vue.Js</title>
+    <link href="style.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    
+</head>
+<body>
+    <div id="vue-app">
+        <h1>{{ greet('afternoon') }}</h1>
+        <p> {{name}}</p>
+        <p>{{job}}</p>
+        <a v-bind:href="website">Website</a>
+        <p v-html="websiteTag"></p>
+
+    </div>
+
+    <!--JS file mora ici na kraj-->
+    <script src="app.js"></script>
+</body>
+
+</html>
