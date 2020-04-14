@@ -13,8 +13,15 @@ new Vue({
         b:0,
         available : false, //dynamic css
         nearby : false,    //dynamic css
-        error : false,
+        error : false, 
         success: false,
+        characters : ['Mario','Luigi','Yoshi','Browser'],
+        ninjas : [
+            {name : 'Ryu',age:25},
+            {name : 'Yoshi', age:35},
+            {name : 'Ken',age:55},
+            { name: {name: 'Srdjan', age :23}, age:50  },
+        ],
 
     },
     methods:{

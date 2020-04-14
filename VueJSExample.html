@@ -10,6 +10,8 @@
     <div id="vue-app">
         <!--#region Binding-->
         <h1>{{ greet('afternoon') }}</h1>
+        <div hidden name="binding/events/eventsmodifier">
+        
         <p> {{name}}</p>
         <p>{{job}}</p>
         <!--binding-->
@@ -30,7 +32,9 @@
         <!-- #endregion -->
         <!--#region Event modifier-->
         <a  v-on:click.prevent="linkClick" href="https://www.google.ba">Google website</a>
+        
         <!--#endregion-->
+        </div>
         <!--#region keyboard events -->
         <div hidden>
         <label>Name</label>
@@ -89,7 +93,34 @@
 
         <!--#endregion-->
 
-    </div>
+        <!--#region Looping with v-for-->
+        <div>
+            <!--{{characters[0]}}-->
+            <ul>
+                <li v-for="character in characters">
+                    {{character}}
+                </li>
+            </ul>
+            <ul>
+                <li v-for="(ninja,index) in ninjas">
+                    index:{{index}} {{ninja.name}} -- {{ninja.age}}
+                </li>
+            </ul>
+            <template v-for="ninja in ninjas">
+                <div v-for="(val,key) in ninja">
+                    <p>{{key}} -- {{val}}</p>
+                </div>
+            </template>
+            <select>
+                 <option  v-for="character in characters":value="character">
+                     {{character}}
+                 </option>
+
+            </select>
+
+        </div>
+        <!-- #endregion -->
+    </div><!--end of vue-app -->
 
     <!--JS file mora ici na kraj-->
     <script src="app.js"></script>
