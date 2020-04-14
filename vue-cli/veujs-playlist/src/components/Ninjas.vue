@@ -7,6 +7,7 @@
 
         </li>
     </ul>
+    <button v-on:click="delNinja">Delete ninja</button>
   </div>
 </template>
 
@@ -24,6 +25,11 @@ export default {
     return {
      
     }
+  },
+  methods:{
+      delNinja:function(){
+          this.ninjas.pop();
+      }
   }
   
 }

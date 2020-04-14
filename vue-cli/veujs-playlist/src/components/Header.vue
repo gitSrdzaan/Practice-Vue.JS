@@ -1,7 +1,7 @@
 <template>
   <div >
     <header>
-        <h1>{{title}}</h1>
+        <h1 v-on:click="changeTitle">{{title}}</h1>
     </header>
   </div>
 </template>
@@ -10,11 +10,20 @@
 
 
 export default {
-  
+  props:{
+      title : {
+          type:String
+      }
+  },
   data () {
     return {
-      title : 'Vue Ninja!'
+     // title : 'Vue Ninja!'
     }
+  },
+  methods:{
+      changeTitle:function(){
+      this.title="New Vue title"
+  }
   }
   
 }
@@ -27,6 +36,6 @@ header{
 }
 h1{
     text-align: center;
-    color: wheat;
+    color: black;
 }
 </style>

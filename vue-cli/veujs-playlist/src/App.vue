@@ -1,8 +1,8 @@
 <template>
   <div >
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <app-main v-bind:ninjas="ninjas"></app-main>
-    <app-footer></app-footer>
+    <app-footer v-bind:copyright="title"></app-footer>
   </div>
 </template>
 
@@ -26,7 +26,9 @@ export default {
             { name :'Nikola', age:20, show:false},
             { name :'Ognjen', age:24, show:false},
             { name :'Haralampije', age:120, show:false},
-      ]
+      ],
+      title : 'Srdjan App!!!',
+      copyright:  "Srdjan App Copyright"
     }
   }
   

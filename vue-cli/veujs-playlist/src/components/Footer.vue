@@ -10,7 +10,11 @@
 
 
 export default {
-  
+  props :{
+      copyright:{
+          type:String
+      }
+  },
   data () {
     return {
       copyright : 'Copyright'
@@ -26,6 +30,6 @@ footer{
 }
 p{
     text-align: center;
-    color: lightskyblue;
+    color:red;
 }
 </style>
