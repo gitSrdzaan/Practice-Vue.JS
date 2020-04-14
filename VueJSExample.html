@@ -12,27 +12,26 @@
         <h1>{{ greet('afternoon') }}</h1>
         <div hidden name="binding/events/eventsmodifier">
         
-        <p> {{name}}</p>
-        <p>{{job}}</p>
-        <!--binding-->
-        <a v-bind:href="website">Website</a>
-        <p v-html="websiteTag"></p>
-        <!-- #endregion -->
+            <p> {{name}}</p>
+            <p>{{job}}</p>
+            <!--binding-->
+            <a v-bind:href="website">Website</a>
+            <p v-html="websiteTag"></p>
+            <!-- #endregion -->
         <!--#region Events -->
-        <p>{{ age }}</p>
-        <button v-on:click="addAge(1)">Add years</button>
-        <button @click="subAge(1)">Subtstract years</button>
-        <!--double click-->
-        <button v-on:dblclick="addAge(10)">Add 10 years</button>
-        <button @dblclick="subAge(10)">Subtstract  10 years</button>
-        <!--mouse move-->
-        <div id="canvas" v-on:mousemove="coordinates">
-            {{x}},{{y}}
-        </div>
+            <p>{{ age }}</p>
+            <button v-on:click="addAge(1)">Add years</button>
+            <button @click="subAge(1)">Subtstract years</button>
+            <!--double click-->
+            <button v-on:dblclick="addAge(10)">Add 10 years</button>
+            <button @dblclick="subAge(10)">Subtstract  10 years</button>
+            <!--mouse move-->
+            <div id="canvas" v-on:mousemove="coordinates">
+                {{x}},{{y}}
+            </div>
         <!-- #endregion -->
         <!--#region Event modifier-->
-        <a  v-on:click.prevent="linkClick" href="https://www.google.ba">Google website</a>
-        
+            <a  v-on:click.prevent="linkClick" href="https://www.google.ba">Google website</a>
         <!--#endregion-->
         </div>
         <!--#region keyboard events -->
@@ -94,7 +93,7 @@
         <!--#endregion-->
 
         <!--#region Looping with v-for-->
-        <div>
+        <div hidden>
             <!--{{characters[0]}}-->
             <ul>
                 <li v-for="character in characters">
@@ -120,6 +119,9 @@
 
         </div>
         <!-- #endregion -->
+        <!-- #region -->
+        <!-- #endregion -->
+    
     </div><!--end of vue-app -->
 
     <!--JS file mora ici na kraj-->
