@@ -17,7 +17,10 @@ new Vue({
             return 'Good '+time + ' '+ this.name
         },
         addAge : function(inc){
-             this.age+=inc;
+             let ret = this.age + inc;
+             console.log(ret);
+             this.age = ret;
+             return ret;
         },
         subAge : function(dec){
              this.age-=dec;

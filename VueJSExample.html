@@ -27,6 +27,7 @@
         </div>
         <!--#region Event modifier-->
         <a  v-on:click.prevent="linkClick" href="https://www.google.ba">Google website</a>
+        <!--#endregion-->
         <p>
         <!--#region keyboard events -->
         <label>Name</label>
@@ -34,6 +35,17 @@
         <label>Age</label>
         <input type="text" v-on:keyup.alt.enter="logAge"/>
         </p>
+        <!--#endregion-->
+        <!--#regoin 2-wat data binding-->
+        <p>
+        <label>Name</label>
+        <input type="text" v-model="name"/>
+        <span>{{name}}</span>
+        <label>Age</label>
+        <input type="text" v-model="age"/>
+        <span>{{age}}</span>
+        </p>
+        <!--#endregion-->
     </div>
 
     <!--JS file mora ici na kraj-->
