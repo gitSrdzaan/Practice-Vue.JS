@@ -22,7 +22,7 @@ export default {
   },
   methods:{
       changeTitle:function(){
-      this.title="New Vue title"
+          this.$emit('changeTitle','New Vue Title');
   }
   }
   

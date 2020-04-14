@@ -1,6 +1,6 @@
 <template>
   <div >
-    <app-header v-bind:title="title"></app-header>
+    <app-header  v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     <app-main v-bind:ninjas="ninjas"></app-main>
     <app-footer v-bind:copyright="title"></app-footer>
   </div>
@@ -29,6 +29,11 @@ export default {
       ],
       title : 'Srdjan App!!!',
       copyright:  "Srdjan App Copyright"
+    }
+  },
+  methods:{
+    updateTitle:function(event){
+      this.title = event;
     }
   }
   
