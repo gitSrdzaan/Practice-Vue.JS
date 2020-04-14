@@ -14,16 +14,15 @@
 
 
 export default {
-  
+  props : {
+      ninjas:{
+          type:Array,
+          required:true
+      }
+  },
   data () {
     return {
-      ninjas : [
-            { name :'Srdjan', age:23, show:false},
-            { name :'Masa', age:21, show:false},
-            { name :'Nikola', age:20, show:false},
-            { name :'Ognjen', age:24, show:false},
-            { name :'Haralampije', age:120, show:false},
-      ]
+     
     }
   }
   

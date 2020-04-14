@@ -1,7 +1,7 @@
 <template>
   <div >
     <app-header></app-header>
-    <app-main></app-main>
+    <app-main v-bind:ninjas="ninjas"></app-main>
     <app-footer></app-footer>
   </div>
 </template>
@@ -20,7 +20,13 @@ export default {
   },
   data () {
     return {
-      title : 'Srdjan App!'
+      ninjas : [
+            { name :'Srdjan', age:23, show:false},
+            { name :'Masa', age:21, show:false},
+            { name :'Nikola', age:20, show:false},
+            { name :'Ognjen', age:24, show:false},
+            { name :'Haralampije', age:120, show:false},
+      ]
     }
   }
   
