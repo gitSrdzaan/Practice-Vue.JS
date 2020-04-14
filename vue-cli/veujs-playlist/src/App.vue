@@ -9,7 +9,8 @@
 import Ninjas from './ninjas.vue'
 
 export default {
-  components : {
+  
+  components : { //local component registration
         'ninjas' : Ninjas
   },
   data () {
@@ -21,5 +22,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped>
+h1{
+  color:green;
+}
 </style>
