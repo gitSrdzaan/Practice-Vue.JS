@@ -42,10 +42,18 @@
         <input type="text" v-model="name"/>
         <span>{{name}}</span>
         <label>Age</label>
-        <input type="text" v-model="age"/>
+        <input type="number" v-model="age"/>
         <span>{{age}}</span>
         </p>
         <!--#endregion-->
+        <!--Computed properties: funkcije koje se izvrsavaju samo kada moraju, ako se koriste methods onda ce se sve pozivati kada se parsira html text-->
+        <p>
+            <button v-on:click="a++">Add to A</button>
+            <button @click="b--">Subtstract to B</button>
+            <p>A = {{a}}</p><p>B = {{b}}</p>
+            <p>Age+A={{addToA}}</p>
+            <p>Age+B={{addToB}}</p>
+        </p>
     </div>
 
     <!--JS file mora ici na kraj-->

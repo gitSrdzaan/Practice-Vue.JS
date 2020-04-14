@@ -8,7 +8,9 @@ new Vue({
         websiteTag : '<a href="https://www.google.ba">WebisteTag</a>',
         age : 23,
         x:0,
-        y:0
+        y:0,
+        a:0,
+        b:0
     },
     methods:{
         greet : function(time){
@@ -17,10 +19,7 @@ new Vue({
             return 'Good '+time + ' '+ this.name
         },
         addAge : function(inc){
-             let ret = this.age + inc;
-             console.log(ret);
-             this.age = ret;
-             return ret;
+            this.age+=inc
         },
         subAge : function(dec){
              this.age-=dec;
@@ -38,7 +37,19 @@ new Vue({
         },
         logAge:function(event){
             console.log('you entered your age');
+        },
+        
+    },//methods
+    computed:{
+        addToA:function(){
+            console.log("addToA");
+            return this.age + this.a;
+        },
+        addToB:function(){
+            console.log("addToB");
+            return this.age+this.b;
         }
-    }
+
+    },//computed
 
 });
