@@ -6,7 +6,7 @@ import App from './App.vue'
 Vue.component('ninjas',Ninjas); //component global registration
 */
 //Vue.use(VueResource);
-Vue.fillter('to-upper',function(value){
+Vue.filter('to-upper',function(value){
   return value.toUpperCase();
 });
 
