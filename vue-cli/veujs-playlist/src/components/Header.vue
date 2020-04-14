@@ -1,7 +1,9 @@
 <template>
   <div >
     <header>
+        <slot name="text"></slot>
         <h1 v-on:click="changeTitle">{{title}}</h1>
+        <slot name="h2title"></slot>
     </header>
   </div>
 </template>
