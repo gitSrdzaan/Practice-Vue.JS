@@ -52,7 +52,7 @@ export default {
       this.title = event;
     },
     changeForm:function(p){
-      if (p === 1) {
+      if (p == 1) {
         this.component = 'form-two';
       }
       else {
