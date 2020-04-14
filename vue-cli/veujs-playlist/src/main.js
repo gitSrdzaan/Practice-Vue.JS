@@ -11,6 +11,8 @@ Vue.fillter('to-upper',function(value){
 });
 
 export const bus = new Vue();
+
+
 Vue.directive('rainbow',{
     bind(el,binding,vnode){
         el.style.color="#"+Math.random().toString.slice(2,8);
