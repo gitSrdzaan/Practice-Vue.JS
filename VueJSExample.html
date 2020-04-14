@@ -10,16 +10,17 @@
     <div id="vue-app">
         <!--#region Binding-->
         <h1>{{ greet('afternoon') }}</h1>
-        <div hidden name="binding/events/eventsmodifier">
-        
+        <div hidden name="binding">
             <p> {{name}}</p>
             <p>{{job}}</p>
             <!--binding-->
             <a v-bind:href="website">Website</a>
             <p v-html="websiteTag"></p>
-            <!-- #endregion -->
+        </div>
+        <!-- #endregion -->
         <!--#region Events -->
-            <p>{{ age }}</p>
+        <div hidden name="events">           
+             <p>{{ age }}</p>
             <button v-on:click="addAge(1)">Add years</button>
             <button @click="subAge(1)">Subtstract years</button>
             <!--double click-->
@@ -29,11 +30,14 @@
             <div id="canvas" v-on:mousemove="coordinates">
                 {{x}},{{y}}
             </div>
+        </div>
         <!-- #endregion -->
         <!--#region Event modifier-->
+        <div hidden name="event modifier">
             <a  v-on:click.prevent="linkClick" href="https://www.google.ba">Google website</a>
-        <!--#endregion-->
         </div>
+        <!--#endregion-->
+        
         <!--#region keyboard events -->
         <div hidden>
         <label>Name</label>
@@ -119,10 +123,25 @@
 
         </div>
         <!-- #endregion -->
-        <!-- #region -->
-        <!-- #endregion -->
-    
     </div><!--end of vue-app -->
+
+    <!--Vue instance se ne mogu preklapati. vue_app ne smije u sebi sadrzati vue_app_one ili vue_app_two-->
+    <!-- #region Multiple Vue Instance-->
+    <div id="vue-app-one">
+        <h2>{{title}}</h2>
+        <p>{{greet()}}</p>
+        <button v-on:click="changeTitle">Change App Title</button>
+
+    </div><!--end of vue-app-one -->
+
+
+    <div id="vue-app-two">
+        <h2>{{title}}</h2>
+        <p>{{greet}}</p>
+        <button v-on:click="changeTitle">Change App Title</button>
+        
+    </div><!--end of vue-two -->
+    <!-- #endregion -->
 
     <!--JS file mora ici na kraj-->
     <script src="app.js"></script>
