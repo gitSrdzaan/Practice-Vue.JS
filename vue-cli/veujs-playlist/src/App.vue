@@ -12,7 +12,7 @@
     </keep-alive>
     <button v-on:click="changeForm(1)">Show diffrent form</button>
     <button v-on:click="changeForm(2)">Show diffrent form</button>
-
+    <router-view></router-view>
   </div>
 </template>
 
