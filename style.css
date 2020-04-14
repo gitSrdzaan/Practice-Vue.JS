@@ -3,5 +3,18 @@
     height: 200;
     text-align: center;
     border: 1px solid #333;
+    visibility: hidden;
 
+}
+.available span{
+    background-color: green;
+}
+span{
+    background-color: indigo;
+}
+
+.nearby span:after{
+    content:"nearby";
+    margin-left: 10px
+    ;
 }

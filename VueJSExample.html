@@ -28,15 +28,15 @@
         <!--#region Event modifier-->
         <a  v-on:click.prevent="linkClick" href="https://www.google.ba">Google website</a>
         <!--#endregion-->
-        <p>
         <!--#region keyboard events -->
+        <p>
         <label>Name</label>
         <input type="text" v-on:keyup.enter="logName"/>
         <label>Age</label>
         <input type="text" v-on:keyup.alt.enter="logAge"/>
         </p>
-        <!--#endregion-->
-        <!--#regoin 2-wat data binding-->
+        <!--#endregion keyboard events -->
+        <!--#region 2-wat data binding-->
         <p>
         <label>Name</label>
         <input type="text" v-model="name"/>
@@ -46,7 +46,8 @@
         <span>{{age}}</span>
         </p>
         <!--#endregion-->
-        <!--Computed properties: funkcije koje se izvrsavaju samo kada moraju, ako se koriste methods onda ce se sve pozivati kada se parsira html text-->
+        <!-- #region Computed properties:
+             funkcije koje se izvrsavaju samo kada moraju, ako se koriste methods onda ce se sve pozivati kada se parsira html text-->
         <p>
             <button v-on:click="a++">Add to A</button>
             <button @click="b--">Subtstract to B</button>
@@ -54,6 +55,23 @@
             <p>Age+A={{addToA}}</p>
             <p>Age+B={{addToB}}</p>
         </p>
+        <!--#endregion-->
+        <!--#region Dynamic Css Classes-->
+        <p>
+            <h3>Dynamic CSS CLasses</h3>
+           <!-- <div v-on:click="available = !available" v-bind:class="{available : available}">
+                <span>Uber</span>
+            </div>-->
+            <button v-on:click="nearby = !nearby">Toggle nearby</button>
+            <button v-on:click="available = !available">Toggle available</button>
+            <div  v-bind:class="compClasses">
+                <span>Taxi</span>
+            </div>
+
+        </p>
+
+        <!--#endregion-->
+    
     </div>
 
     <!--JS file mora ici na kraj-->
