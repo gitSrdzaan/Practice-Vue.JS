@@ -30,7 +30,28 @@ export default {
       delNinja:function(){
           this.ninjas.pop();
       }
+  },
+  //lifecycle hooks
+  beforeCreate(){
+    alert('before create');
+  },
+  created(){
+    //fetch from database
+    alert('created');
+  },
+  beforeMount(){
+    alert('BEFORE MOUNT');
+  },
+  mounted(){
+    alert('mounted');
+  },
+  beforeUpdate(){
+    alert('before update');
+  },
+  updated(){
+    alert('updated');
   }
+
   
 }
 </script>
