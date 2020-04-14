@@ -8,13 +8,15 @@
 </head>
 <body>
     <div id="vue-app">
+        <!--#region Binding-->
         <h1>{{ greet('afternoon') }}</h1>
         <p> {{name}}</p>
         <p>{{job}}</p>
         <!--binding-->
         <a v-bind:href="website">Website</a>
         <p v-html="websiteTag"></p>
-        <!--events/click -->
+        <!-- #endregion -->
+        <!--#region Events -->
         <p>{{ age }}</p>
         <button v-on:click="addAge(1)">Add years</button>
         <button @click="subAge(1)">Subtstract years</button>
@@ -25,39 +27,40 @@
         <div id="canvas" v-on:mousemove="coordinates">
             {{x}},{{y}}
         </div>
+        <!-- #endregion -->
         <!--#region Event modifier-->
         <a  v-on:click.prevent="linkClick" href="https://www.google.ba">Google website</a>
         <!--#endregion-->
         <!--#region keyboard events -->
-        <p>
+        <div hidden>
         <label>Name</label>
         <input type="text" v-on:keyup.enter="logName"/>
         <label>Age</label>
         <input type="text" v-on:keyup.alt.enter="logAge"/>
-        </p>
+        </div>
         <!--#endregion keyboard events -->
         <!--#region 2-wat data binding-->
-        <p>
+        <div hidden>
         <label>Name</label>
         <input type="text" v-model="name"/>
         <span>{{name}}</span>
         <label>Age</label>
         <input type="number" v-model="age"/>
         <span>{{age}}</span>
-        </p>
+        </div>
         <!--#endregion-->
         <!-- #region Computed properties:
              funkcije koje se izvrsavaju samo kada moraju, ako se koriste methods onda ce se sve pozivati kada se parsira html text-->
-        <p>
+        <div hidden>
             <button v-on:click="a++">Add to A</button>
             <button @click="b--">Subtstract to B</button>
             <p>A = {{a}}</p><p>B = {{b}}</p>
             <p>Age+A={{addToA}}</p>
             <p>Age+B={{addToB}}</p>
-        </p>
+        </div>
         <!--#endregion-->
         <!--#region Dynamic Css Classes-->
-        <p>
+        <div hidden>
             <h3>Dynamic CSS CLasses</h3>
            <!-- <div v-on:click="available = !available" v-bind:class="{available : available}">
                 <span>Uber</span>
@@ -68,10 +71,24 @@
                 <span>Taxi</span>
             </div>
 
-        </p>
+        </div>
+        <!--#endregion-->
+        <!--#region Conditionals-->
+        <div hidden>
+            <button v-on:click="error = !error">Toggle Error</button>
+            <button v-on:click="success = !success">Toggle Success</button>
+            <p v-if="error" class="Condition">
+                Error show
+            </p>
+            <p v-else-if="success" class="Condition">
+                Success show
+            </p>
+            <p v-show="error" >Show Error</p>
+            <p v-show="success">Show Success</p>
+        </div>
 
         <!--#endregion-->
-    
+
     </div>
 
     <!--JS file mora ici na kraj-->

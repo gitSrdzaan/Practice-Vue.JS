@@ -12,7 +12,10 @@ new Vue({
         a:0,
         b:0,
         available : false, //dynamic css
-        nearby : false    //dynamic css
+        nearby : false,    //dynamic css
+        error : false,
+        success: false,
+
     },
     methods:{
         greet : function(time){
