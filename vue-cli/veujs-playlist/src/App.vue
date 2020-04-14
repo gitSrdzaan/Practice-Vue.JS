@@ -1,17 +1,22 @@
 <template>
   <div >
-    <h1>{{title}}</h1>
-    <ninjas></ninjas>
+    <app-header></app-header>
+    <app-main></app-main>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import Ninjas from './ninjas.vue'
+
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+import Ninjas from './components/Ninjas.vue'
 
 export default {
-  
-  components : { //local component registration
-        'ninjas' : Ninjas
+  components:{
+      'app-header':Header,
+      'app-footer':Footer,
+      'app-main' : Ninjas
   },
   data () {
     return {
