@@ -144,7 +144,7 @@
     <!-- #endregion -->
 
     <!--#region Components-->
-    <div  id="vue-app-one-component">
+    <div hidden id="vue-app-one-component">
         <h2>{{title}}</h2>
         <p>{{greet()}}</p>
         <button v-on:click="changeTitle">Change App Title</button>
@@ -152,7 +152,7 @@
     </div><!--end of vue-app-one -->
 
 
-    <div  id="vue-app-two-component">
+    <div hidden id="vue-app-two-component">
         <h2>{{title}}</h2>
         <p>{{greet}}</p>
         <button v-on:click="changeTitle">Change App Title</button>
@@ -160,6 +160,16 @@
     </div><!--end of vue-two -->
 
     <!-- #endregion -->
+    
+    <!--#regioni Referencing with $refs-->
+    <div id='vue-app-one-refs'>
+        <input type="text" ref="input"/>
+        <button v-on:click="readRefs">Submit</button>
+        <p>Your fav food {{output}}</p>
+    </div>
+    <!-- #endregion -->
+    
+    
     <!--JS file mora ici na kraj-->
     <script src="app.js"></script>
 </body>

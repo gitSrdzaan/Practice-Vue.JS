@@ -93,9 +93,10 @@ var vue_app = new Vue({
 });
 
 var vue_app_one = new Vue({
-    el: '#vue-app-one-component',
+    el: '#vue-app-one-refs',
     data:{
         title:'Vue App One',
+        output : 'Your fav food',
     }, //data
     methods:{
         greet:function(){
@@ -103,6 +104,9 @@ var vue_app_one = new Vue({
         },
         changeTitle:function(){
             this.title = vue_app_two.title;
+        },
+        readRefs : function(){
+            this.output = this.$refs.input.value;
         }
 
     },//methods
