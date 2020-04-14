@@ -25,10 +25,15 @@
         <div id="canvas" v-on:mousemove="coordinates">
             {{x}},{{y}}
         </div>
-        <!--Event modifier-->
+        <!--#region Event modifier-->
         <a  v-on:click.prevent="linkClick" href="https://www.google.ba">Google website</a>
-
-
+        <p>
+        <!--#region keyboard events -->
+        <label>Name</label>
+        <input type="text" v-on:keyup.enter="logName"/>
+        <label>Age</label>
+        <input type="text" v-on:keyup.alt.enter="logAge"/>
+        </p>
     </div>
 
     <!--JS file mora ici na kraj-->
