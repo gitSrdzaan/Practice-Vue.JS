@@ -4,6 +4,9 @@ import App from './App.vue'
 
 Vue.component('ninjas',Ninjas); //component global registration
 */
+
+export const bus = new Vue();
+
 new Vue({
   el: '#app',
   render: h => h(App)

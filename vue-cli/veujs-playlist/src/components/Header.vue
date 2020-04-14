@@ -7,7 +7,7 @@
 </template>
 
 <script>
-
+import {bus} from '../main' //.. upper level
 
 export default {
   props:{
@@ -17,12 +17,14 @@ export default {
   },
   data () {
     return {
-     // title : 'Vue Ninja!'
+     title : 'Vue Ninja!'
     }
   },
   methods:{
       changeTitle:function(){
-          this.$emit('changeTitle','New Vue Title');
+          //this.$emit('changeTitle','New Vue Title');
+          this.title='BusEvent: New App Title';
+          bus.$emit('titleChanged','BusEvent: New App Title');
   }
   }
   

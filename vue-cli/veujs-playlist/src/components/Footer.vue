@@ -1,17 +1,17 @@
 <template>
   <div >
     <footer>
-        <p>{{copyright}}</p>
+        <p>{{copyright}} ++ {{title}}</p>
     </footer>
   </div>
 </template>
 
 <script>
-
-
+ import {bus} from '../main' //.. upper level
+ 
 export default {
   props :{
-      copyright:{
+      title:{
           type:String
       }
   },
@@ -19,6 +19,11 @@ export default {
     return {
       copyright : 'Copyright'
     }
+  },
+  created(){
+      bus.$on('titleChanged',(data)=>{
+          this.title = data;
+      })
   }
   
 }

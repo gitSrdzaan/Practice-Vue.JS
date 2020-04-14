@@ -2,7 +2,7 @@
   <div >
     <app-header  v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     <app-main v-bind:ninjas="ninjas"></app-main>
-    <app-footer v-bind:copyright="title"></app-footer>
+    <app-footer v-bind:title="copyright"></app-footer>
   </div>
 </template>
 
