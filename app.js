@@ -1,3 +1,22 @@
+var dataObj = {
+    name : 'Yoshi'
+}//globalna promjenjiva ce uvezati sve instance u komponenti. Metode komponente je sada zajednicka za sve instance koje nju sadrze
+
+Vue.component('greeting',{
+    template : '<p>Hey there, I am a {{name}}.<button v-on:click="changeName">Click me</button></p>',
+    data : function(){
+        // return dataObj;
+        return  {
+            name : 'Yoshi'
+        };//za svaku instancu koja sadrzi komponentu ce imati svoj objekat data i njime ce moci upravljati
+    },
+    methods:{
+        changeName:function(){
+            this.name = 'Srdjan';
+        }
+    }
+});
+
 var vue_app = new Vue({
     el:'#vue-app', //koji element je kontrosila Vue instancom
     //kojim podacima ce upravljati, data je objekat koji sadrzi svoje polja koja mogu biti razlicita
@@ -74,7 +93,7 @@ var vue_app = new Vue({
 });
 
 var vue_app_one = new Vue({
-    el: '#vue-app-one',
+    el: '#vue-app-one-component',
     data:{
         title:'Vue App One',
     }, //data
@@ -93,7 +112,7 @@ var vue_app_one = new Vue({
 
 });
 var vue_app_two = new Vue({
-    el: '#vue-app-two',
+    el: '#vue-app-two-component',
     data:{
         title:'Vue App Two',
 
@@ -113,3 +132,4 @@ var vue_app_two = new Vue({
 });
 
 vue_app_two.title ="Change outside defenition";
+

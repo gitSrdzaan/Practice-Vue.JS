@@ -127,7 +127,7 @@
 
     <!--Vue instance se ne mogu preklapati. vue_app ne smije u sebi sadrzati vue_app_one ili vue_app_two-->
     <!-- #region Multiple Vue Instance-->
-    <div id="vue-app-one">
+    <div hidden id="vue-app-one">
         <h2>{{title}}</h2>
         <p>{{greet()}}</p>
         <button v-on:click="changeTitle">Change App Title</button>
@@ -135,7 +135,7 @@
     </div><!--end of vue-app-one -->
 
 
-    <div id="vue-app-two">
+    <div hidden id="vue-app-two">
         <h2>{{title}}</h2>
         <p>{{greet}}</p>
         <button v-on:click="changeTitle">Change App Title</button>
@@ -143,6 +143,23 @@
     </div><!--end of vue-two -->
     <!-- #endregion -->
 
+    <!--#region Components-->
+    <div  id="vue-app-one-component">
+        <h2>{{title}}</h2>
+        <p>{{greet()}}</p>
+        <button v-on:click="changeTitle">Change App Title</button>
+        <greeting></greeting>
+    </div><!--end of vue-app-one -->
+
+
+    <div  id="vue-app-two-component">
+        <h2>{{title}}</h2>
+        <p>{{greet}}</p>
+        <button v-on:click="changeTitle">Change App Title</button>
+        <greeting></greeting>
+    </div><!--end of vue-two -->
+
+    <!-- #endregion -->
     <!--JS file mora ici na kraj-->
     <script src="app.js"></script>
 </body>
